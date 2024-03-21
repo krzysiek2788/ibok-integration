@@ -22,7 +22,7 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_entry(hass, entry, async_add_entities):
     """Config entry example."""
     # assuming API object stored here by __init__.py
-    my_api = hass.data[DOMAIN][entry.entry_id]
+    my_api = hass.data[ibok][entry.entry_id]
     coordinator = MyCoordinator(hass, my_api)
 
     # Fetch initial data so we have data when entities subscribe
